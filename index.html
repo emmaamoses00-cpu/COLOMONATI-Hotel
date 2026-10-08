@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>COLOMONATI Hotel | Luxury & Comfort</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                <span>COLOMONATI</span>
+                <small>HOTEL & RESORT</small>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#experience">Experience</a>
+                <a href="#dining">Dining</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="#booking" class="nav-book">Book Now</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <p class="eyebrow">WELCOME TO COLOMONATI</p>
+
+            <h1>
+                Stay Somewhere
+                <span>Extraordinary.</span>
+            </h1>
+
+            <p class="hero-text">
+                Experience refined comfort, exceptional hospitality
+                and unforgettable moments in one beautiful destination.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">
+                    Book Your Stay
+                </a>
+
+                <a href="#rooms" class="btn btn-outline">
+                    Explore Rooms
+                </a>
+            </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fas fa-arrow-down"></i>
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING BAR -->
+    <section class="booking-bar" id="booking">
+
+        <div class="container booking-container">
+
+            <div class="booking-item">
+                <i class="fas fa-calendar-check"></i>
+
+                <div>
+                    <label>CHECK IN</label>
+                    <input type="date" id="checkIn">
+                </div>
+            </div>
+
+
+            <div class="booking-item">
+                <i class="fas fa-calendar-days"></i>
+
+                <div>
+                    <label>CHECK OUT</label>
+                    <input type="date" id="checkOut">
+                </div>
+            </div>
+
+
+            <div class="booking-item">
+                <i class="fas fa-user-group"></i>
+
+                <div>
+                    <label>GUESTS</label>
+
+                    <select id="guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2" selected>2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <button class="booking-btn" id="checkAvailability">
+                Check Availability
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="intro section">
+
+        <div class="container intro-grid">
+
+            <div class="intro-text">
+
+                <p class="section-label">THE COLOMONATI EXPERIENCE</p>
+
+                <h2>
+                    Where luxury meets
+                    <span>genuine hospitality.</span>
+                </h2>
+
+                <p>
+                    At COLOMONATI Hotel, every detail is designed to make
+                    your stay comfortable, peaceful and memorable.
+                </p>
+
+                <p>
+                    From beautifully designed rooms to carefully prepared
+                    dining experiences, we create an environment where
+                    guests can relax, reconnect and enjoy every moment.
+                </p>
+
+                <a href="#experience" class="text-link">
+                    Discover our story
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="intro-card">
+
+                <div class="intro-card-content">
+
+                    <span>EST.</span>
+
+                    <strong>COLOMONATI</strong>
+
+                    <small>
+                        SHOP. CONNECT. GROW.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ROOMS -->
+    <section class="rooms section" id="rooms">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">ACCOMMODATION</p>
+
+                    <h2>
+                        Rooms designed
+                        <span>for relaxation.</span>
+                    </h2>
+                </div>
+
+                <p>
+                    Choose a space designed around comfort,
+                    elegance and a peaceful stay.
+                </p>
+
+            </div>
+
+
+            <div class="room-grid">
+
+                <article class="room-card">
+
+                    <div class="room-image room-one">
+
+                        <span class="room-tag">
+                            POPULAR
+                        </span>
+
+                    </div>
+
+                    <div class="room-info">
+
+                        <div class="room-title">
+                            <h3>Deluxe Room</h3>
+
+                            <span>
+                                From $120 / night
+                            </span>
+                        </div>
+
+                        <p>
+                            A comfortable and elegant room
+                            with everything you need for a relaxing stay.
+                        </p>
+
+                        <div class="room-features">
+                            <span>
+                                <i class="fas fa-bed"></i>
+                                King Bed
+                            </span>
+
+                            <span>
+                                <i class="fas fa-user"></i>
+                                2 Guests
+                            </span>
+
+                            <span>
+                                <i class="fas fa-wifi"></i>
+                                Wi-Fi
+                            </span>
+                        </div>
+
+                        <a href="#booking" class="room-link">
+                            Reserve Room
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="room-card">
+
+                    <div class="room-image room-two"></div>
+
+                    <div class="room-info">
+
+                        <div class="room-title">
+                            <h3>Executive Suite</h3>
+
+                            <span>
+                                From $210 / night
+                            </span>
+                        </div>
+
+                        <p>
+                            Spacious accommodation with a refined
+                            living area and premium amenities.
+                        </p>
+
+                        <div class="room-features">
+
+                            <span>
+                                <i class="fas fa-bed"></i>
+                                King Bed
+                            </span>
+
+                            <span>
+                                <i class="fas fa-user"></i>
+                                3 Guests
+                            </span>
+
+                            <span>
+                                <i class="fas fa-wifi"></i>
+                                Wi-Fi
+                            </span>
+
+                        </div>
+
+                        <a href="#booking" class="room-link">
+                            Reserve Room
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="room-card">
+
+                    <div class="room-image room-three"></div>
+
+                    <div class="room-info">
+
+                        <div class="room-title">
+                            <h3>Presidential Suite</h3>
+
+                            <span>
+                                From $390 / night
+                            </span>
+                        </div>
+
+                        <p>
+                            Our most exclusive stay, created for
+                            guests seeking exceptional comfort.
+                        </p>
+
+                        <div class="room-features">
+
+                            <span>
+                                <i class="fas fa-bed"></i>
+                                King Bed
+                            </span>
+
+                            <span>
+                                <i class="fas fa-user"></i>
+                                4 Guests
+                            </span>
+
+                            <span>
+                                <i class="fas fa-wifi"></i>
+                                Wi-Fi
+                            </span>
+
+                        </div>
+
+                        <a href="#booking" class="room-link">
+                            Reserve Room
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section class="experience section" id="experience">
+
+        <div class="container">
+
+            <div class="section-heading centered">
+
+                <p class="section-label">
+                    MORE THAN A STAY
+                </p>
+
+                <h2>
+                    Experience
+                    <span>COLOMONATI.</span>
+                </h2>
+
+                <p>
+                    Everything you need to make your stay
+                    comfortable, enjoyable and memorable.
+                </p>
+
+            </div>
+
+
+            <div class="experience-grid">
+
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+
+                    <h3>Wellness</h3>
+
+                    <p>
+                        Relax and recharge with peaceful
+                        wellness experiences.
+                    </p>
+                </div>
+
+
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i class="fas fa-person-swimming"></i>
+                    </div>
+
+                    <h3>Pool</h3>
+
+                    <p>
+                        Enjoy a refreshing escape beside
+                        our beautiful pool.
+                    </p>
+                </div>
+
+
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+
+                    <h3>Fitness</h3>
+
+                    <p>
+                        Stay active with modern fitness
+                        facilities available to guests.
+                    </p>
+                </div>
+
+
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+
+                    <h3>Concierge</h3>
+
+                    <p>
+                        Helpful service whenever you need
+                        assistance during your stay.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DINING -->
+    <section class="dining section" id="dining">
+
+        <div class="container dining-grid">
+
+            <div class="dining-visual">
+
+                <div class="dining-badge">
+                    <strong>FRESH</strong>
+                    <span>EVERY DAY</span>
+                </div>
+
+            </div>
+
+
+            <div class="dining-content">
+
+                <p class="section-label">
+                    DINING
+                </p>
+
+                <h2>
+                    Taste something
+                    <span>beautiful.</span>
+                </h2>
+
+                <p>
+                    Discover carefully prepared dishes,
+                    refreshing drinks and memorable dining
+                    experiences in a relaxed atmosphere.
+                </p>
+
+                <div class="dining-list">
+
+                    <div>
+                        <i class="fas fa-utensils"></i>
+
+                        <span>
+                            <strong>Restaurant</strong>
+                            Freshly prepared meals throughout the day.
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-mug-hot"></i>
+
+                        <span>
+                            <strong>Café & Lounge</strong>
+                            Coffee, conversations and relaxed moments.
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-champagne-glasses"></i>
+
+                        <span>
+                            <strong>Private Dining</strong>
+                            Elegant spaces for special occasions.
+                        </span>
+                    </div>
+
+                </div>
+
+                <a href="#contact" class="btn btn-dark">
+                    Explore Dining
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="gallery section" id="gallery">
+
+        <div class="container">
+
+            <div class="section-heading centered">
+
+                <p class="section-label">
+                    GALLERY
+                </p>
+
+                <h2>
+                    A glimpse of
+                    <span>your stay.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item gallery-one">
+                    <span>Luxury</span>
+                </div>
+
+                <div class="gallery-item gallery-two">
+                    <span>Relax</span>
+                </div>
+
+                <div class="gallery-item gallery-three">
+                    <span>Dining</span>
+                </div>
+
+                <div class="gallery-item gallery-four">
+                    <span>Comfort</span>
+                </div>
+
+                <div class="gallery-item gallery-five">
+                    <span>Moments</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <div class="container cta-content">
+
+            <p class="section-label">
+                YOUR NEXT ESCAPE
+            </p>
+
+            <h2>
+                Make your stay
+                <span>memorable.</span>
+            </h2>
+
+            <p>
+                Whether you're travelling for business,
+                relaxation or a special occasion,
+                COLOMONATI is ready to welcome you.
+            </p>
+
+            <a href="#booking" class="btn btn-primary">
+                Book Your Stay
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+
+        <div class="container contact-grid">
+
+            <div>
+
+                <p class="section-label">
+                    GET IN TOUCH
+                </p>
+
+                <h2>
+                    We'd love to
+                    <span>welcome you.</span>
+                </h2>
+
+                <p>
+                    Have a question about your stay?
+                    Contact our team and we'll be happy to help.
+                </p>
+
+                <div class="contact-details">
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+
+                        <span>
+                            <strong>Location</strong>
+                            Kampala, Uganda
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-phone"></i>
+
+                        <span>
+                            <strong>Phone</strong>
+                            +256 700 000 000
+                        </span>
+                    </div>
+
+                    <div>
+                        <i class="fas fa-envelope"></i>
+
+                        <span>
+                            <strong>Email</strong>
+                            stay@colomonati.com
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Your message"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn btn-primary">
+                    Send Message
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <p id="formMessage"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <a href="#home" class="logo footer-logo">
+                    <span>COLOMONATI</span>
+                    <small>HOTEL & RESORT</small>
+                </a>
+
+                <p>
+                    A modern hospitality experience built
+                    around comfort, elegance and genuine service.
+                </p>
+
+                <div class="socials">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="#rooms">Rooms</a>
+                <a href="#experience">Experience</a>
+                <a href="#dining">Dining</a>
+                <a href="#gallery">Gallery</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Hotel</h4>
+
+                <a href="#booking">Book a Room</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#home">About</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>COLOMONATI</h4>
+
+                <p>
+                    Shop. Connect. Grow.
+                </p>
+
+                <p>
+                    © 2026 COLOMONATI Hotel.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

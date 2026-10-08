@@ -1,0 +1,1184 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --navy: #101b2d;
+    --deep: #08111f;
+    --gold: #c8a96b;
+    --gold-light: #e3c98e;
+    --cream: #f7f4ee;
+    --white: #ffffff;
+    --text: #28313d;
+    --muted: #707782;
+    --border: #e5e0d7;
+    --dark: #111827;
+    --shadow: 0 18px 50px rgba(8, 17, 31, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.05;
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 4.4rem);
+    font-weight: 600;
+}
+
+h2 span,
+h1 span {
+    color: var(--gold);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    color: var(--white);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.nav-container {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo small {
+    color: var(--gold-light);
+    font-size: 0.52rem;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-menu a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--gold-light);
+}
+
+.nav-book {
+    padding: 12px 21px;
+    border: 1px solid var(--gold);
+    color: var(--gold-light) !important;
+}
+
+.nav-book:hover {
+    background: var(--gold);
+    color: var(--deep) !important;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 1.4rem;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 760px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    background:
+        linear-gradient(120deg, #101b2d, #27364a 45%, #6e5a3f);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 75% 30%, rgba(227,201,142,0.28), transparent 28%),
+        linear-gradient(90deg, rgba(4,10,19,0.88), rgba(8,17,31,0.35));
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to bottom, transparent 70%, rgba(8,17,31,0.75));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 70px;
+    max-width: 850px;
+}
+
+.eyebrow {
+    color: var(--gold-light);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 9vw, 7.5rem);
+    font-weight: 500;
+    max-width: 900px;
+}
+
+.hero-text {
+    max-width: 610px;
+    margin: 28px 0 35px;
+    color: rgba(255,255,255,0.82);
+    font-size: 1.05rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 26px;
+    border: 1px solid transparent;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--deep);
+}
+
+.btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: rgba(255,255,255,0.6);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--deep);
+}
+
+.btn-dark {
+    background: var(--deep);
+    color: white;
+}
+
+.btn-dark:hover {
+    background: var(--gold);
+    color: var(--deep);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 4%;
+    z-index: 3;
+    color: rgba(255,255,255,0.65);
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* =========================
+   BOOKING BAR
+========================= */
+
+.booking-bar {
+    background: var(--white);
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.booking-container {
+    min-height: 115px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    align-items: center;
+    gap: 25px;
+}
+
+.booking-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-right: 1px solid var(--border);
+    padding-right: 20px;
+}
+
+.booking-item > i {
+    color: var(--gold);
+    font-size: 1.25rem;
+}
+
+.booking-item label {
+    display: block;
+    color: var(--muted);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.booking-item input,
+.booking-item select {
+    border: 0;
+    outline: 0;
+    color: var(--text);
+    background: transparent;
+    font-size: 0.85rem;
+    padding: 4px 0;
+}
+
+.booking-btn {
+    border: 0;
+    background: var(--deep);
+    color: white;
+    padding: 16px 24px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.booking-btn:hover {
+    background: var(--gold);
+    color: var(--deep);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    background: var(--cream);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.intro-text {
+    max-width: 590px;
+}
+
+.intro-text h2 {
+    margin-bottom: 25px;
+}
+
+.intro-text > p:not(.section-label) {
+    color: var(--muted);
+    margin-bottom: 17px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    color: var(--deep);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-link:hover {
+    color: var(--gold);
+}
+
+.intro-card {
+    min-height: 470px;
+    background:
+        linear-gradient(145deg, rgba(16,27,45,0.92), rgba(56,70,89,0.8)),
+        radial-gradient(circle at 50% 30%, #c8a96b, transparent 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.intro-card-content {
+    width: 75%;
+    height: 75%;
+    border: 1px solid rgba(227,201,142,0.55);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.intro-card-content span {
+    color: var(--gold-light);
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+}
+
+.intro-card-content strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    letter-spacing: 4px;
+    margin: 8px 0;
+}
+
+.intro-card-content small {
+    color: var(--gold-light);
+    letter-spacing: 3px;
+    font-size: 0.55rem;
+}
+
+/* =========================
+   ROOMS
+========================= */
+
+.rooms {
+    background: white;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 55px;
+}
+
+.section-heading > p {
+    max-width: 360px;
+    color: var(--muted);
+}
+
+.section-heading.centered {
+    display: block;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-heading.centered > p:last-child {
+    margin: 18px auto 0;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.room-card {
+    background: white;
+    border: 1px solid var(--border);
+    transition: 0.35s;
+}
+
+.room-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.room-image {
+    height: 290px;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #b9a27d, #27384c 60%, #111827);
+}
+
+.room-two::after {
+    background: linear-gradient(135deg, #7d8b94, #c9b18a 55%, #1c2938);
+}
+
+.room-three::after {
+    background: linear-gradient(135deg, #1d2939, #7d6649 55%, #d5c09a);
+}
+
+.room-image::before {
+    content: "COLOMONATI";
+    position: absolute;
+    z-index: 2;
+    color: rgba(255,255,255,0.4);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.room-tag {
+    position: absolute;
+    z-index: 3;
+    top: 18px;
+    left: 18px;
+    background: var(--gold);
+    color: var(--deep);
+    padding: 7px 11px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.room-info {
+    padding: 28px;
+}
+
+.room-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 15px;
+}
+
+.room-title h3 {
+    font-size: 1.8rem;
+}
+
+.room-title span {
+    white-space: nowrap;
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.room-info > p {
+    color: var(--muted);
+    font-size: 0.86rem;
+    margin: 13px 0 20px;
+}
+
+.room-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 17px;
+}
+
+.room-features span {
+    color: var(--muted);
+    font-size: 0.67rem;
+}
+
+.room-features i {
+    color: var(--gold);
+    margin-right: 4px;
+}
+
+.room-link {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 22px;
+    color: var(--deep);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.room-link:hover {
+    color: var(--gold);
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience {
+    background: var(--deep);
+    color: white;
+}
+
+.experience .section-label {
+    color: var(--gold-light);
+}
+
+.experience .section-heading.centered > p:last-child {
+    color: rgba(255,255,255,0.65);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.experience-card {
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 38px 25px;
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    border-color: rgba(200,169,107,0.7);
+    transform: translateY(-5px);
+}
+
+.experience-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(200,169,107,0.5);
+    color: var(--gold-light);
+    margin-bottom: 25px;
+}
+
+.experience-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.experience-card p {
+    color: rgba(255,255,255,0.62);
+    font-size: 0.82rem;
+}
+
+/* =========================
+   DINING
+========================= */
+
+.dining {
+    background: var(--cream);
+}
+
+.dining-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.dining-visual {
+    min-height: 570px;
+    position: relative;
+    background:
+        linear-gradient(145deg, #7a6042, #d4c0a0 45%, #253548);
+    overflow: hidden;
+}
+
+.dining-visual::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.16);
+    top: 20%;
+    left: 25%;
+    box-shadow: 0 0 0 25px rgba(255,255,255,0.08),
+                0 0 0 50px rgba(255,255,255,0.05);
+}
+
+.dining-visual::after {
+    content: "DINING";
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.8rem;
+    letter-spacing: 5px;
+}
+
+.dining-badge {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--deep);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dining-badge strong {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.dining-badge span {
+    font-size: 0.48rem;
+    letter-spacing: 1px;
+}
+
+.dining-content > p:not(.section-label) {
+    color: var(--muted);
+    margin: 22px 0;
+}
+
+.dining-list {
+    display: grid;
+    gap: 20px;
+    margin: 28px 0;
+}
+
+.dining-list > div {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.dining-list i {
+    color: var(--gold);
+    margin-top: 5px;
+}
+
+.dining-list span {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.dining-list strong {
+    display: block;
+    color: var(--deep);
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 0.8fr;
+    grid-template-rows: 250px 250px;
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    padding: 22px;
+    color: white;
+    background: linear-gradient(135deg, #1d2b3c, #a68a62);
+}
+
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 35%, rgba(255,255,255,0.2), transparent 35%);
+}
+
+.gallery-item span {
+    position: relative;
+    z-index: 2;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+}
+
+.gallery-one {
+    grid-row: span 2;
+    background: linear-gradient(160deg, #23364b, #a88b62, #101827);
+}
+
+.gallery-two {
+    background: linear-gradient(135deg, #a78d6b, #384b60);
+}
+
+.gallery-three {
+    background: linear-gradient(135deg, #5e4b39, #d0b98e);
+}
+
+.gallery-four {
+    background: linear-gradient(135deg, #26384a, #738294);
+}
+
+.gallery-five {
+    background: linear-gradient(135deg, #bca17a, #182535);
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    background:
+        linear-gradient(120deg, rgba(8,17,31,0.96), rgba(31,45,61,0.92));
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.cta-content {
+    max-width: 720px;
+}
+
+.cta h2 {
+    margin-bottom: 22px;
+}
+
+.cta p:not(.section-label) {
+    color: rgba(255,255,255,0.68);
+    margin-bottom: 30px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: var(--cream);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.contact-grid > div > p:not(.section-label) {
+    color: var(--muted);
+    margin: 22px 0 30px;
+}
+
+.contact-details {
+    display: grid;
+    gap: 20px;
+}
+
+.contact-details > div {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-details i {
+    color: var(--gold);
+    margin-top: 5px;
+}
+
+.contact-details span {
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.contact-details strong {
+    display: block;
+    color: var(--deep);
+}
+
+.contact-form {
+    background: white;
+    padding: 35px;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    outline: none;
+    padding: 15px;
+    background: #fcfbf8;
+    color: var(--text);
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold);
+}
+
+.formMessage {
+    font-size: 0.8rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #070e18;
+    color: white;
+    padding: 70px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr 0.7fr 1fr;
+    gap: 50px;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.78rem;
+    max-width: 310px;
+}
+
+.socials {
+    display: flex;
+    gap: 9px;
+    margin-top: 25px;
+}
+
+.socials a {
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255,255,255,0.18);
+    display: grid;
+    place-items: center;
+    color: rgba(255,255,255,0.7);
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background: var(--gold);
+    color: var(--deep);
+    border-color: var(--gold);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column h4 {
+    color: var(--gold-light);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.78rem;
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: var(--gold-light);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .booking-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 25px 0;
+    }
+
+    .booking-item {
+        border-right: 0;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro-grid,
+    .dining-grid {
+        gap: 45px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .navbar {
+        background: rgba(8,17,31,0.95);
+    }
+
+    .nav-container {
+        min-height: 76px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: var(--deep);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px 6%;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 13px 0;
+    }
+
+    .nav-book {
+        text-align: center;
+        margin: 5px 0 12px;
+    }
+
+    .hero {
+        min-height: 690px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+    .booking-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .booking-item {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 15px;
+    }
+
+    .booking-btn {
+        width: 100%;
+    }
+
+    .intro-grid,
+    .dining-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px 220px;
+    }
+
+    .gallery-one {
+        grid-row: span 2;
+    }
+
+    .gallery-five {
+        grid-column: span 2;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 20px;
+    }
+
+    .contact-grid {
+        gap: 45px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .hero-content {
+        padding-top: 45px;
+    }
+
+    .hero-text {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .intro-card {
+        min-height: 350px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dining-visual {
+        min-height: 390px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 220px);
+    }
+
+    .gallery-one,
+    .gallery-five {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+}
